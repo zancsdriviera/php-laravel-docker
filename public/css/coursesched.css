@@ -1,0 +1,139 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top_caption {
+    padding-top: 50px !important;
+}
+.top-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 38px !important;
+    text-align: center;
+    color: #107039;
+}
+
+.bullet_container a {
+    font-size: 1.2rem !important;
+    font-family: "Lato", sans-serif !important;
+    color: #107039;
+}
+.top-title::before,
+.top-title::after {
+    content: "";
+    width: 200px; /* control line length */
+    border-bottom: 2px solid #107039;
+    margin: 0 50px; /* spacing from text */
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+.calendar-header {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.date-cell {
+    padding: 8px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    min-height: 90px;
+    transition: background 0.2s ease;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center */
+    align-items: center; /* horizontal center */
+    text-align: center;
+}
+.date-cell:hover {
+    background: #e9ecef;
+}
+
+.day-number {
+    font-size: 0.85rem;
+    font-weight: bold;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: #333;
+}
+
+.event-group {
+    margin-top: 4px;
+}
+
+.event-label {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.event-title {
+    font-size: 0.75rem;
+    color: #007bff;
+}
+
+/* Center modal content */
+#eventDetails {
+    text-align: center;
+}
+
+.empty-cell {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+/* Tablets: 577px–768px */
+@media (min-width: 577px) and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+}
+
+/* Large phones: 480px–576px */
+@media (min-width: 480px) and (max-width: 576px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+
+    .custom-bg {
+        height: 175px; /* reduce banner height */
+        font-size: 38px; /* smaller text */
+        letter-spacing: 4px; /* less spacing */
+    }
+
+    .custom-bg h1 {
+        font-size: 2rem; /* fine-tune the heading itself */
+    }
+}
+/* Mobile: 1 week per row */
+@media (max-width: 576px) {
+    .event-group {
+        display: none;
+    }
+    .date-cell {
+        min-height: 60px; /* smaller cells since no text */
+        font-size: 0.9rem;
+    }
+    .day-number {
+        font-size: 1rem;
+    }
+}

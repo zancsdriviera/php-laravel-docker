@@ -1,0 +1,387 @@
+/* ----------------- BASE ----------------- */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ----------------- TOP CONTACT BAR ----------------- */
+.top-contact-bar {
+    background-color: #256335;
+    color: white;
+    padding: 6px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.social-icon {
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    margin-left: 12px;
+}
+.social-icon:hover {
+    color: #a3cfbb !important;
+    transform: translateY(-2px);
+}
+
+/* ----------------- CARD GLOBALS ----------------- */
+.card {
+    border-radius: 0 !important;
+}
+.card img {
+    border-radius: 0 !important;
+}
+.card h5 {
+    font-family: "Lato", sans-serif !important;
+    font-size: 40px !important;
+    font-weight: bold;
+    color: #107039;
+}
+.custom-btn {
+    border-radius: 0 !important;
+    font-family: "Baskervville SC", sans-serif !important;
+    font-size: 22px !important;
+}
+
+/* ----------------- CONTACT / BOARD / GALLERY TITLES ----------------- */
+.top_caption {
+    padding-top: 50px !important;
+}
+.top-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 38px !important;
+    text-align: center;
+    color: #107039;
+}
+.top-title::before,
+.top-title::after {
+    content: "";
+    width: 200px;
+    border-bottom: 2px solid #107039;
+    margin: 0 50px;
+}
+.board-title,
+.gallery-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 48px !important;
+    text-align: center;
+}
+.board-title::before,
+.board-title::after,
+.gallery-title::before,
+.gallery-title::after {
+    content: "";
+    width: 200px;
+    border-bottom: 2px solid currentColor;
+    margin: 0 50px;
+}
+.gallery-title {
+    color: #107039;
+}
+
+/* ===== Rates cards (scoped) ===== */
+.rates-section .rates-title {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+    color: #111;
+    font-size: 32px;
+}
+.rates-section .rates-heading {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #111;
+}
+.rates-section .rates-sub {
+    color: #333;
+    font-family: "Lato", Arial, sans-serif;
+    margin-top: 8px;
+    font-size: 24px;
+    max-width: 500px; /* limit width */
+    margin: 8px auto 0; /* center horizontally, keep top margin */
+    line-height: 1.4; /* optional: better readability */
+    text-align: center; /* optional: center text */
+}
+
+.rates-section .rates-sub1 {
+    color: #333;
+    font-family: "Lato", Arial, sans-serif;
+    margin-top: 8px;
+    font-size: 18px;
+    max-width: 500px; /* limit width */
+    margin: 8px auto 0; /* center horizontally, keep top margin */
+    line-height: 1.4; /* optional: better readability */
+    text-align: center; /* optional: center text */
+}
+
+/* Card */
+.rate-card {
+    max-width: 400px; /* adjust as needed */
+    margin: 0 auto; /* center the card */
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    position: relative;
+    /* overflow: hidden; */ /* remove this */
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+.cart-card {
+    max-width: 400px; /* adjust as needed */
+    margin: 0 auto; /* center the card */
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    position: relative;
+    /* overflow: hidden; */ /* remove this */
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.cart-badge {
+    position: absolute;
+    font-family: "Lato", Arial, sans-serif;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #107039;
+    color: #fff;
+    padding: 10px 0px;
+    width: 280px; /* adjust as needed */
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    z-index: 2;
+}
+.rates-section .cart-sub {
+    color: #333;
+    font-family: "Lato", Arial, sans-serif;
+    margin-top: 8px;
+    font-size: 14px;
+    max-width: 500px; /* limit width */
+    margin: 8px auto 0; /* center horizontally, keep top margin */
+    line-height: 1.4; /* optional: better readability */
+    text-align: center; /* optional: center text */
+}
+.cart-fee-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 18px;
+    display: grid;
+    row-gap: 8px;
+    grid-template-columns: max-content 150px; /* push amounts further right */
+    column-gap: 120px; /* extra spacing between label and amount */
+    align-items: start;
+}
+
+.cart-fee-list li {
+    display: contents;
+}
+
+.cart-fee-label::before {
+    content: "•";
+    color: #107039;
+    margin-right: 6px;
+}
+.cart-fee-label {
+    color: #222;
+}
+
+.cart-fee-amount {
+    text-align: left;
+}
+.cart-rate-body {
+    padding: 50px 20px 26px; /* increased top padding to push fee list down */
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+/* Badge that overlaps top border */
+.rate-badge {
+    position: absolute;
+    font-family: "Lato", Arial, sans-serif;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #107039;
+    color: #fff;
+    padding: 10px 36px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 18px;
+    z-index: 2;
+}
+.rate-badge2 {
+    position: absolute;
+    font-family: "Lato", Arial, sans-serif;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #107039;
+    color: #fff;
+    padding: 10px 0px;
+    width: 280px; /* adjust as needed */
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    z-index: 2;
+}
+
+/* Price bar */
+.price-bar {
+    background: #107039;
+    color: #fff;
+    margin-top: 50px; /* leave space for badge */
+    padding: 22px 16px;
+    text-align: center;
+}
+.rate-card .price {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Body content */
+.rate-body {
+    padding: 18px 20px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+/* Fee list - left label / right price */
+.fee-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 18px;
+    display: grid;
+    row-gap: 8px; /* space between rows */
+    grid-template-columns: max-content 120px; /* labels take width, amounts have fixed column */
+    align-items: start;
+    column-gap: 50px; /* extra horizontal spacing */
+}
+
+.fee-list li {
+    display: contents; /* allow children to participate in grid */
+}
+
+.fee-label::before {
+    content: "•"; /* bullet */
+    color: #107039;
+    margin-right: 6px;
+}
+.fee-label {
+    padding-right: 12px;
+    color: #222;
+}
+
+.fee-amount {
+    text-align: left; /* left-align all amounts in the column */
+}
+
+/* CTA button (pill) */
+.rate-cta {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+.btn-ghost {
+    background: transparent;
+    border: 2px solid #ddd;
+    padding: 14px 34px;
+    border-radius: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: default;
+    transition: all 0.15s ease;
+    background-clip: padding-box;
+}
+.btn-ghost:hover {
+    cursor: default; /* keep cursor default on hover */
+}
+
+/* small adjustments */
+.rate-card,
+.rate-card * {
+    box-sizing: border-box;
+}
+/* Responsive tweaks */
+@media (max-width: 991.98px) {
+    .rate-card {
+        min-height: 340px;
+    }
+    .rate-badge {
+        padding: 8px 28px;
+        font-size: 13px;
+        top: -16px;
+    }
+    .rate-card .price {
+        font-size: 28px;
+    }
+}
+@media (max-width: 575.98px) {
+    .rates-section .rates-heading {
+        font-size: 28px;
+    }
+    .rates-section .rates-sub {
+        font-size: 14px;
+    }
+    .rates-section .rates-sub1 {
+        font-size: 14px;
+    }
+    .rate-card {
+        min-height: 300px;
+        border-radius: 12px;
+    }
+    .rate-badge {
+        top: -14px;
+        padding: 6px 20px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+    .price-bar {
+        padding: 14px 12px;
+    }
+    .rate-card .price {
+        font-size: 22px;
+    }
+    .fee-list li {
+        font-size: 13px;
+    }
+    .btn-ghost {
+        padding: 10px 20px;
+    }
+    .rate-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+}

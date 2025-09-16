@@ -1,0 +1,119 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------
+   Titles
+-------------------- */
+.top_caption {
+    padding-top: 50px !important;
+}
+.top-title {
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 38px !important;
+    color: #107039;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-title::before,
+.top-title::after {
+    content: "";
+    width: 200px;
+    border-bottom: 2px solid #107039;
+    margin: 0 50px;
+}
+.bot-title {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 38px !important;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bot-title::before,
+.bot-title::after {
+    content: "";
+    width: 400px;
+    border-bottom: 2px solid #fff;
+    margin: 0 50px;
+}
+
+/* --------------------
+   Pricing
+-------------------- */
+.pricing-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.pricing-box {
+    border: 1px solid #ccc;
+    width: 600px;
+    min-height: 700px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+.pricing-header {
+    background: #107039;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.pricing-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.pricing-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.label,
+.price {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+.label {
+    font-weight: bold;
+    color: #000;
+}
+.label .desc {
+    display: block;
+    font-weight: 400;
+    margin-top: 6px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* --------------------
+   Contact Section
+-------------------- */
+.contacts_container {
+    background: #107039;
+    padding-top: 50px !important;
+}
+.contacts_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contacts_column a,
+.contacts_column i {
+    color: #fff;
+    text-decoration: none;
+}
+.contacts_column > div {
+    margin-bottom: 10px;
+}

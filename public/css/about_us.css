@@ -1,0 +1,326 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.MV_caption .mb-3 {
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 700 !important;
+    font-size: 50px !important;
+}
+.mission_container .MV_caption p,
+li {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.1rem !important;
+}
+.vision_container .MV_caption p {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.1rem !important;
+}
+
+.mission_container,
+.vision_container {
+    min-height: 500px; /* allow sections to expand if needed */
+}
+.mission_container,
+.vision_container p {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 20px !important;
+}
+.mission_container img,
+.vision_container img {
+    width: 100%;
+    height: auto; /* scales naturally */
+    object-fit: cover; /* keeps aspect ratio */
+}
+
+.mission_container .row,
+.vision_container .row {
+    display: flex;
+    align-items: stretch; /* keep both columns equal height */
+}
+
+.mission_content,
+.vision_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center text vertically */
+    padding: 2rem;
+}
+.card-body {
+    background-color: #202123;
+}
+.card-title {
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 28px !important;
+}
+.card-text {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 18px !important;
+}
+
+.board_caption .mb-4 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 32px !important;
+    color: #555;
+}
+
+.bottom_card h5 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 32px !important;
+    color: #555;
+    font-weight: bolder;
+    padding-top: 20px !important;
+}
+
+.bottom_card .card-body {
+    background-color: #107039;
+    padding-bottom: 50px !important;
+    height: auto;
+}
+.bottom_card .card-text {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 1.1rem !important;
+    color: white;
+    font-weight: lighter;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 48px !important;
+    text-align: center;
+    color: #3d404c;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    width: 200px; /* control line length */
+    border-bottom: 2px solid #3d404c;
+    margin: 0 50px; /* spacing from text */
+}
+
+.board-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 48px !important;
+    text-align: center;
+    color: #3d404c;
+}
+
+.board-title::before,
+.board-title::after {
+    content: "";
+    width: 200px; /* control line length */
+    border-bottom: 2px solid #3d404c;
+    margin: 0 50px; /* spacing from text */
+}
+
+.gallery-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Anton", Arial, sans-serif;
+    font-size: 48px !important;
+    text-align: center;
+    color: #107039;
+}
+
+.gallery-title::before,
+.gallery-title::after {
+    content: "";
+    width: 200px; /* control line length */
+    border-bottom: 2px solid #107039;
+    margin: 0 50px; /* spacing from text */
+}
+
+.bot_container {
+    background-color: #202123;
+}
+
+/* Optional: style bullets */
+.bot_container li {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem !important;
+    font-family: "Lato", Arial, sans-serif;
+    color: white;
+}
+.bot_container .caption_txt {
+    color: white;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 36px !important;
+    font-weight: bolder;
+}
+.gallery_container {
+    max-width: 1400px; /* wider container so images scale up */
+    margin: 0 auto; /* center it */
+    padding: 0 15px; /* keep a little side gap */
+}
+
+/* Tablets: 577px–768px */
+@media (min-width: 577px) and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
+    .card-text {
+        font-size: 1rem;
+    }
+    .vision_container p {
+        font-size: 1rem;
+    }
+    .vision_container .mb-3,
+    .mission_container .mb-3,
+    .profile_container .mb-3 {
+        font-size: 2rem;
+    }
+    .card-body.card_custom h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Large phones: 480px–576px */
+@media (min-width: 480px) and (max-width: 576px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+    .vision_container p {
+        font-size: 0.8rem;
+    }
+    .vision_container .mb-3,
+    .mission_container .mb-3,
+    .profile_container .mb-3 {
+        font-size: 1.8rem;
+    }
+    .card-title,
+    .bottom_card h5 {
+        font-size: 26px !important;
+    }
+    .card-text,
+    .bottom_card .card-text {
+        font-size: 18px !important;
+    }
+
+    .card {
+        max-width: 90%; /* make them narrower */
+        margin: 0 auto; /* center align */
+    }
+
+    .card img {
+        height: auto; /* keep image proportion */
+    }
+
+    .card-body {
+        padding: 0.75rem; /* reduce padding inside */
+    }
+
+    .custom-bg {
+        height: 300px; /* reduce banner height */
+        font-size: 38px; /* smaller text */
+        letter-spacing: 4px; /* less spacing */
+    }
+
+    .custom-bg h1 {
+        font-size: 2rem; /* fine-tune the heading itself */
+    }
+}
+
+/* Small phones: ≤ 479px */
+@media (max-width: 479px) {
+    h2 {
+        font-size: 1.4rem;
+    }
+    p,
+    ul {
+        font-size: 0.9 rem;
+    }
+    .vision_container p {
+        font-size: 0.7rem;
+    }
+    .vision_container .mb-3,
+    .mission_container .mb-3,
+    .profile_container .mb-3 {
+        font-size: 1.6rem;
+        text-decoration-thickness: 3px;
+    }
+    .card-body.card_custom h5 {
+        font-size: 0.75rem;
+    }
+    .MV_caption .mb-3 {
+        font-size: 1.6rem !important;
+    }
+    .MV_caption p {
+        font-size: 1rem !important;
+    }
+    .MV_caption ul {
+        font-size: 1rem !important;
+    }
+    .section-title {
+        font-size: 2.4rem !important;
+    }
+    .board_caption .mb-4 {
+        font-size: 1.5rem !important;
+    }
+    .bot_container .caption_txt {
+        font-size: 1.2rem !important;
+    }
+    .bot_container ul {
+        font-size: 1rem !important;
+    }
+
+    .card-title,
+    .bottom_card h5 {
+        font-size: 24px !important;
+    }
+    .card-text,
+    .bottom_card .card-text {
+        font-size: 1rem !important;
+    }
+
+    .card {
+        max-width: 80%; /* make them narrower */
+        margin: 0 auto; /* center align */
+    }
+
+    .card img {
+        height: auto; /* keep image proportion */
+    }
+
+    .card-body {
+        padding: 0.75rem; /* reduce padding inside */
+    }
+
+    .custom-bg {
+        height: 250px; /* reduce banner height */
+        font-size: 36px; /* smaller text */
+        letter-spacing: 4px; /* less spacing */
+    }
+
+    .custom-bg h1 {
+        font-size: 1.8rem; /* fine-tune the heading itself */
+    }
+    .board_caption h2 {
+        font-size: 2rem !important;
+    }
+}

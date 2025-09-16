@@ -1,0 +1,180 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------
+   Cards
+-------------------- */
+.card {
+    min-height: 450px !important;
+    border-radius: 20px !important;
+}
+.card img {
+    border-radius: 20px !important;
+    min-height: 250px !important;
+}
+/* CSS snippet */
+:root {
+    --bg: #f1f2f1;
+    --card-radius: 14px;
+    --accent: #1e90ff;
+    --max-width: 1200px;
+}
+
+.news-grid {
+    background: var(--bg);
+    padding: 36px 18px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* desktop: 3 per row */
+    gap: 1rem;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 100%; /* ✅ force card to fit grid cell */
+}
+.news-card:hover {
+    transform: translateY(-4px);
+}
+.news-card img {
+    width: 100%; /* ✅ scale inside card */
+    height: auto;
+    display: block;
+}
+.content {
+    padding: 0.8rem;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    border-radius: var(--card-radius);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    outline: none;
+}
+
+/* hero image */
+.media {
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(8, 10, 12, 0.06);
+}
+.media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+}
+
+/* title and date */
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* hover / keyboard focus effects */
+.card-link:hover {
+    transform: translateY(-3px);
+}
+.card-link:focus,
+.card-link:focus-visible {
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.22);
+    border-radius: var(--card-radius);
+}
+
+/* selected card */
+.news-card.selected .card-link {
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.28);
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px 0 6px 0;
+}
+.page-btn {
+    appearance: none;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+.page-btn:hover {
+    transform: translateY(-1px);
+}
+.page-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.14);
+}
+
+.page-btn.active,
+.page-btn[aria-current="true"] {
+    border-color: rgba(30, 144, 255, 0.6);
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.12);
+}
+
+/* Tablet: 2 cards per row */
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* small screens: 2 per row */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Tablets (577px–768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+}
+/* Large phones (480px–576px) */
+@media (min-width: 480px) and (max-width: 576px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+    p,
+    ul {
+        font-size: 1rem;
+    }
+    .custom-bg {
+        height: 175px;
+        font-size: 38px;
+        letter-spacing: 4px;
+    }
+    .custom-bg h1 {
+        font-size: 2rem;
+    }
+}
