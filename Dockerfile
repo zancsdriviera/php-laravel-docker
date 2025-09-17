@@ -1,8 +1,15 @@
 FROM richarvey/nginx-php-fpm:3.1.6
 
-COPY . .
+WORKDIR /var/www/html
 
+# Copy composer files first
+COPY composer.json composer.lock ./
+
+# Install dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Now copy the rest of the app
+COPY . .
 
 ENV WEBROOT /var/www/html/public
 ENV PHP_ERRORS_STDERR 1
