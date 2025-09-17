@@ -70,3 +70,6 @@ Route::get('/locker', function () {
     return view('locker'); // resources/views/rates2.blade.php
 })->name('locker');
 
+Route::get('/', function () {
+    return 'Hello from Laravel on Render 🚀';
+});
