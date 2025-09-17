@@ -4,6 +4,15 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\UserController;
 
+Route::get('/', function () {
+    // If APP_KEY is missing, Laravel’s EncryptCookies breaks → show a quick debug
+    if (empty(config('app.key'))) {
+        return response('APP_KEY is missing! Please set it in Render environment.', 500);
+    }
+
+    // Redirect root (/) to /home
+    return redirect()->route('home');
+});
 
 
 Route::get('/home', [UserController::class, 'home'])->name('home');
@@ -69,7 +78,3 @@ Route::get('/clubhouse', function () {
 Route::get('/locker', function () {
     return view('locker'); // resources/views/rates2.blade.php
 })->name('locker');
-
-Route::get('/', function () {
-    return 'Hello from Laravel on Render 🚀';
-});
