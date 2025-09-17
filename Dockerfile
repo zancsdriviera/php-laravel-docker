@@ -4,9 +4,11 @@ FROM php:8.2-fpm-alpine AS build
 WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
-RUN apk add --no-cache bash git unzip curl \
+RUN apk add --no-cache bash git unzip curl libzip-dev oniguruma-dev \
+    && docker-php-ext-install pdo pdo_mysql mbstring zip bcmath \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer install --no-dev --optimize-autoloader
+
 
 COPY . .
 
