@@ -1,21 +1,25 @@
-FROM richarvey/nginx-php-fpm:3.1.6
+# Stage 1: Build
+FROM php:8.2-fpm-alpine AS build
 
 WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
-
-RUN composer install --no-dev --optimize-autoloader --no-scripts
+RUN apk add --no-cache bash git unzip curl \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+    && composer install --no-dev --optimize-autoloader
 
 COPY . .
 
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
+# Stage 2: Serve
+FROM nginx:alpine
 
-ENV APP_ENV production
-ENV APP_DEBUG false
-ENV LOG_CHANNEL stderr
-ENV COMPOSER_ALLOW_SUPERUSER 1
+COPY --from=build /var/www/html /var/www/html
 
-CMD ["/start.sh"]
+COPY .docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+
+WORKDIR /var/www/html
+
+EXPOSE 80
+
+CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
+
